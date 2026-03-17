@@ -180,13 +180,13 @@ function SplitRankingPanel({ charts, rankedItems, setRankedItems, accentColor = 
             onDrop={onThumbAreaDrop}
             onDragOver={onDragOver}
             style={{
-              background: "#f8f9fb", borderRadius: 10, padding: 14,
+              background: "#f8f9fb", borderRadius: 10, padding: "14px 10px",
               border: "1.5px dashed #d1d8e0", marginBottom: 14,
               minHeight: 80,
             }}
           >
             <div style={{
-              display: "flex", flexWrap: "nowrap", gap: 8,
+              display: "flex", flexWrap: "nowrap", gap: 6,
               justifyContent: "space-between",
             }}>
               {charts.map((chart) => {
@@ -202,7 +202,7 @@ function SplitRankingPanel({ charts, rankedItems, setRankedItems, accentColor = 
                     style={{
                       flex: "1 1 0", minWidth: 0, background: "#fff",
                       border: isComparing ? `2px solid ${accentColor}` : "1.5px solid #e2e8f0",
-                      borderRadius: 8, padding: 5,
+                      borderRadius: 8, padding: 3,
                       opacity: isRanked ? 0.3 : 1,
                       cursor: isRanked ? "default" : "grab",
                       position: "relative", userSelect: "none",
@@ -449,7 +449,7 @@ function RadioGroup({ name, options, value, onChange }) {
 function Page({ children }) {
   return (
     <div style={{
-      maxWidth: 1200, margin: "0 auto", padding: "40px 24px",
+      maxWidth: 1400, margin: "0 auto", padding: "40px 24px",
       fontFamily: "'Source Sans 3', 'Segoe UI', system-ui, sans-serif",
     }}>{children}</div>
   );
