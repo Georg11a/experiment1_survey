@@ -1017,7 +1017,7 @@ export default function SurveyApp() {
           <p style={{ color: "#718096", fontSize: 16, lineHeight: 1.6 }}>
             Your responses have been recorded successfully. Please click the button below to return to Prolific and complete your submission.
           </p>
-          <a href="https://app.prolific.com/submissions/complete?cc=123" style={{ textDecoration: "none" }}>
+          <a href="https://app.prolific.com/submissions/complete?cc=CLOB1EB9" style={{ textDecoration: "none" }}>
             <button style={{
               marginTop: 28, padding: "14px 36px", borderRadius: 8, border: "none",
               background: "#2a8fc1", color: "#fff", fontSize: 17, fontWeight: 700,
@@ -1025,7 +1025,7 @@ export default function SurveyApp() {
             }}>Return to Prolific</button>
           </a>
           <p style={{ color: "#a0aec0", fontSize: 13, lineHeight: 1.6, marginTop: 20 }}>
-            If the button does not work, please copy and paste this completion code into Prolific: <strong style={{ color: "#2d3748" }}>123</strong>
+            If the button does not work, please copy and paste this completion code into Prolific: <strong style={{ color: "#2d3748" }}>CLOB1EB9</strong>
           </p>
           <div style={{
             marginTop: 24, padding: "14px 24px", background: "#f7f8fa",
@@ -1056,7 +1056,7 @@ export default function SurveyApp() {
         <p style={{ color: "#718096", fontSize: 16, lineHeight: 1.6 }}>
           Your responses have been recorded successfully. Please click the button below to return to Prolific and complete your submission.
         </p>
-        <a href="https://app.prolific.com/submissions/complete?cc=CPLKA9P2" style={{ textDecoration: "none" }}>
+        <a href="https://app.prolific.com/submissions/complete?cc=C11F7B01" style={{ textDecoration: "none" }}>
           <button style={{
             marginTop: 28, padding: "14px 36px", borderRadius: 8, border: "none",
             background: "#2a8fc1", color: "#fff", fontSize: 17, fontWeight: 700,
@@ -1064,7 +1064,7 @@ export default function SurveyApp() {
           }}>Return to Prolific</button>
         </a>
         <p style={{ color: "#a0aec0", fontSize: 13, lineHeight: 1.6, marginTop: 20 }}>
-          If the button does not work, please copy and paste this completion code into Prolific: <strong style={{ color: "#2d3748" }}>CPLKA9P2</strong>
+          If the button does not work, please copy and paste this completion code into Prolific: <strong style={{ color: "#2d3748" }}>C11F7B01</strong>
         </p>
         <div style={{
           marginTop: 24, padding: "14px 24px", background: "#f7f8fa",
