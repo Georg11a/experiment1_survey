@@ -714,8 +714,6 @@ export default function SurveyApp() {
               Most participants complete the study in about <strong>9 minutes</strong>. In general, the study should be finished within 20 minutes. <strong>Going beyond may increase the risk of timing out.</strong>
             </p>
           </div>
-            </p>
-          </div>
           <Nav showBack={false} onNext={next} nextLabel="Begin →" />
         </div>
       </Page>
