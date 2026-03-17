@@ -706,16 +706,6 @@ export default function SurveyApp() {
             </p>
           </div>
 
-          {/* Yellow callout: first glance */}
-          <div style={{
-            background: "#fffbeb", borderLeft: "4px solid #d69e2e", borderRadius: 8,
-            padding: "16px 20px", margin: "20px 0",
-          }}>
-            <p style={{ color: "#744210", fontSize: 15, lineHeight: 1.7, margin: 0 }}>
-              ⚠ In this study, you will judge the charts based on your <strong style={{ textDecoration: "underline" }}>first impression</strong>. You do not need to analyze the data content — focus only on the visual style.
-            </p>
-          </div>
-
           <div style={{ borderTop: "1px solid #e2e8f0", paddingTop: 24 }}>
             <p style={{ color: "#6b7a8d", fontSize: 16, lineHeight: 1.75 }}>
               In each round you will rank the same set of charts for <strong>professionalism</strong>. Drag charts from the thumbnail panel into the ranking slots. Click on charts to compare them side by side. Click the ⤢ icon to see any chart enlarged.
