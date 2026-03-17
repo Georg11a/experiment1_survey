@@ -702,7 +702,7 @@ export default function SurveyApp() {
             padding: "16px 20px", margin: "20px 0",
           }}>
             <p style={{ color: "#744210", fontSize: 15, lineHeight: 1.7, margin: 0 }}>
-              ⚠ <strong>"Professional"</strong> refers to the kind of visual style you might expect to see in <strong>published work</strong>, such as journalism, reports, or research papers. Focus on design elements like layout, typography, color, spacing, alignment, and clarity.
+              ⚠ <strong>"Professional"</strong> refers to the kind of visual style you might expect to see in <strong>published work</strong>, such as journalism, reports, or research papers. Focus on design elements such as typography, color, spacing, alignment, emphasis, and overall visual consistency.
             </p>
           </div>
 
@@ -730,16 +730,16 @@ export default function SurveyApp() {
             boxShadow: "0 1px 4px rgba(0,0,0,.06)", border: "1px solid #e8ecf1",
           }}>
             <label style={{ fontWeight: 600, color: "#2d3748", fontSize: 16 }}>
-              Based on the instructions, how many times will you rank the same set of charts in each round? <span style={{ color: "#e53e3e" }}>*</span>
+              What is your main task in this study? <span style={{ color: "#e53e3e" }}>*</span>
             </label>
             <div style={{ marginTop: 16 }}>
-              <RadioGroup name="comprehension" options={["Once", "Twice", "Three times"]}
+              <RadioGroup name="comprehension" options={["Judge how accurate the data is", "Rank charts based on how professional they look", "Choose the most interesting topic"]}
                 value={comprehensionAnswer} onChange={setComprehensionAnswer} />
             </div>
             <div style={{ display: "flex", justifyContent: "flex-end", marginTop: 28 }}>
               <button
                 onClick={() => {
-                  if (comprehensionAnswer === "Once") {
+                  if (comprehensionAnswer === "Rank charts based on how professional they look") {
                     next();
                   } else {
                     setComprehensionFailed(true);
