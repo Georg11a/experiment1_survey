@@ -186,8 +186,8 @@ function SplitRankingPanel({ charts, rankedItems, setRankedItems, accentColor = 
             }}
           >
             <div style={{
-              display: "flex", flexWrap: "wrap", gap: 8,
-              justifyContent: "flex-start",
+              display: "flex", flexWrap: "nowrap", gap: 8,
+              justifyContent: "space-between",
             }}>
               {charts.map((chart) => {
                 const isRanked = rankedItems.some((r) => r && r.id === chart.id);
@@ -200,7 +200,7 @@ function SplitRankingPanel({ charts, rankedItems, setRankedItems, accentColor = 
                     onDragEnd={onDragEnd}
                     onClick={() => !isRanked && toggleCompare(chart)}
                     style={{
-                      width: 90, background: "#fff",
+                      flex: "1 1 0", minWidth: 0, background: "#fff",
                       border: isComparing ? `2px solid ${accentColor}` : "1.5px solid #e2e8f0",
                       borderRadius: 8, padding: 5,
                       opacity: isRanked ? 0.3 : 1,
@@ -548,7 +548,7 @@ export default function SurveyApp() {
   const [submitError, setSubmitError] = useState(null);
 
   // Google Apps Script Web App URL — replace after deploying
-  const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxgdAXjQ2NEzp_Qof0LlN9N5kGkQ0WIsqrjp1O3CZEHn6UJp8QXT5i1OnD_u9M6C3Y/exec";
+  const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbytqBbcYgKoavzpiD8eHYGnbrjw-OtJSye1H9XuLhLxOCglwlZ2orv90iqtOKj_Zw/exec";
 
   const collectData = useCallback(() => ({
     prolificId, age, gender, education, designExp, colorVision,
@@ -867,24 +867,24 @@ export default function SurveyApp() {
               <label style={{ fontWeight: 600, color: "#2d3748", fontSize: 15 }}>
                 Please select <strong>{attentionCheckNumber}</strong> on the scale below. <span style={{ color: "#e53e3e" }}>*</span>
               </label>
-              <div style={{
-                display: "flex", justifyContent: "space-between", marginTop: 20,
-                maxWidth: 420,
-              }}>
-                {[1, 2, 3, 4, 5, 6].map((n) => (
-                  <div key={n} style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 8 }}>
-                    <span style={{ fontSize: 15, fontWeight: 600, color: "#4a5568" }}>{n}</span>
-                    <button
-                      onClick={() => setAttentionCheckAnswer(String(n))}
-                      style={{
-                        width: 32, height: 32, borderRadius: "50%",
-                        border: attentionCheckAnswer === String(n) ? "2.5px solid #2a8fc1" : "2px solid #cbd5e0",
-                        background: attentionCheckAnswer === String(n) ? "#e8f4fb" : "#fff",
-                        cursor: "pointer", transition: "all .15s",
-                      }}
-                    />
-                  </div>
-                ))}
+              <div style={{ display: "flex", gap: 12, marginTop: 16 }}>
+                {[1, 2, 3, 4, 5, 6].map((n) => {
+                  const selected = attentionCheckAnswer === String(n);
+                  return (
+                    <label key={n} onClick={() => setAttentionCheckAnswer(String(n))} style={{
+                      display: "flex", flexDirection: "column", alignItems: "center", gap: 6,
+                      padding: "12px 16px", borderRadius: 8, cursor: "pointer",
+                      background: selected ? "#e8f4fb" : "#fff",
+                      border: selected ? "1px solid #2a8fc1" : "1px solid transparent",
+                      transition: "all .15s", minWidth: 48,
+                    }}>
+                      <span style={{ fontSize: 15, fontWeight: 600, color: "#4a5568" }}>{n}</span>
+                      <input type="radio" name="attentionCheck" value={n}
+                        checked={selected} onChange={() => setAttentionCheckAnswer(String(n))}
+                        style={{ accentColor: "#2a8fc1", width: 18, height: 18 }} />
+                    </label>
+                  );
+                })}
               </div>
             </div>
           )}
