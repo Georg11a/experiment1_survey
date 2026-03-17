@@ -693,7 +693,7 @@ export default function SurveyApp() {
           <h1 style={{ fontSize: 26, fontWeight: 700, color: "#4a5568", margin: "0 0 24px" }}>Welcome!</h1>
           <div style={{ color: "#6b7a8d", fontSize: 17, lineHeight: 1.75, marginBottom: 32 }}>
             <p>In this study, you will be shown different versions of the same data visualization. The only difference between them will be the visual style.</p>
-            <p style={{ marginTop: 20 }}>Your task is to rank each set of seven charts based on how <strong>professional</strong> each chart looks. Please ignore the data content and focus solely on the design elements. You will complete {TOTAL_ROUNDS} rounds.</p>
+            <p style={{ marginTop: 20 }}>Your task is to rank each set of seven charts based on how <strong>professional</strong> each chart looks. <strong>Please ignore the data content and focus solely on the design elements.</strong> You will complete {TOTAL_ROUNDS} rounds.</p>
           </div>
 
           {/* Yellow callout: definition */}
@@ -709,6 +709,11 @@ export default function SurveyApp() {
           <div style={{ borderTop: "1px solid #e2e8f0", paddingTop: 24 }}>
             <p style={{ color: "#6b7a8d", fontSize: 16, lineHeight: 1.75 }}>
               In each round you will rank the same set of charts for <strong>professionalism</strong>. Drag charts from the thumbnail panel into the ranking slots. Click on charts to compare them side by side. Click the ⤢ icon to see any chart enlarged.
+            </p>
+            <p style={{ color: "#6b7a8d", fontSize: 16, lineHeight: 1.75, marginTop: 16 }}>
+              Most participants complete the study in about <strong>9 minutes</strong>. In general, the study should be finished within 20 minutes. <strong>Going beyond may increase the risk of timing out.</strong>
+            </p>
+          </div>
             </p>
           </div>
           <Nav showBack={false} onNext={next} nextLabel="Begin →" />
