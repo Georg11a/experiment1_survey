@@ -558,7 +558,7 @@ export default function SurveyApp() {
     roundTimings: roundTimings.map((t) => Math.round(t / 1000)),
     attentionCheckNumber,
     attentionCheckAnswer,
-    attentionCheckPassed: attentionCheckPassed === true,
+    attentionCheckPassed: attentionCheckAnswer !== "" ? attentionCheckAnswer === String(attentionCheckNumber) : null,
     rounds: allRoundData.map((r, i) => ({
       round: i + 1,
       roundType: r.roundType,
